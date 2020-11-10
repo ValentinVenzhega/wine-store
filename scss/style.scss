@@ -1,0 +1,62 @@
+@import 'header';
+@import 'main';
+@import 'new';
+@import 'futured';
+@import 'review';
+@import 'offer';
+
+
+body {
+   color:#ffffff;
+   margin: 0;
+   font-family: 'Poppins', sans-serif;
+   background: #000000
+}
+
+img {
+	max-width: 100%;
+}
+
+input, button {
+   &:focus {
+      outline: none;
+   }  
+
+   &:hover {
+      cursor: pointer;
+   }
+}
+
+a {
+   text-decoration: none;
+   color: #ffffff;
+   &:hover {
+      color: #E2B024;
+      border-bottom: 1px solid #E2B024;
+      padding-bottom: 10px;
+      transition-duration: 100ms;
+   }	
+      
+}
+
+ul {
+   padding-left: 0;
+}
+
+li {
+   list-style-type: none;
+}
+
+// .button:hover {
+//    background: #ffffff;
+//    color:  #22262A;
+//    font-weight: 600;
+//    transition: all 0.2s ease 0s;
+// }
+
+// .button__two:hover {
+//    background: #22262A;
+//    color: #ffffff;
+//    font-weight: 600;
+//    transition: all 0.2s ease 0s;
+// }

@@ -1,0 +1,41 @@
+.header {
+   &__one {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      font-size: 12px;
+   }
+
+   &__list {
+      display: flex;
+      justify-content: space-around;
+      border-top: 1px solid rgba(255, 255, 255, 0.6);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+      padding: 22px;
+      margin: 10px 0 0 0;
+      font-family: "ChocolateBox", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+   }
+
+   &__active {
+      display: flex;
+      align-items: center;
+
+      &-one {
+         padding-right: 30px;
+      }
+
+      &-two {
+         padding-right: 30px;
+      }
+   }
+   
+
+   
+}
+
+.container {
+   max-width: 1171px;
+   margin: 0 auto;
+}

@@ -1,0 +1,111 @@
+.new {
+   position: relative;
+   background: #18191A;
+   padding: 267px 0 267px 0;
+
+
+   &__bigblock {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   &__uptitle {
+      font-size: 20px;
+      padding-bottom: 47px;
+      letter-spacing: 0.35em;
+   }
+
+   &__title {
+      font-family: "ChocolateBox", sans-serif;
+      font-size: 74px;
+      color: #E2B024;
+      padding-bottom: 12px;
+   }
+
+
+   &__subtitle {
+      font-size: 36px;
+      padding-bottom: 52px;
+   }
+
+   &__text {
+      font-size: 18px;
+      max-width: 526px;
+      padding-bottom: 64px;
+      line-height: 40px;
+   }
+
+   &__btn {
+      width: 233px;
+      height: 69px;
+      font-size: 24px;
+      font-weight: 500;
+   }
+
+
+   &__btn-one {
+      background: #E2B024;
+      color: #000000;
+      border: none;
+      margin-right: 60px;
+
+      &:hover {
+         background: none;
+         // border-color: #E2B024;
+         color: #ffffff;
+         border: 1px solid #E2B024;
+         
+      }
+   }
+
+   &__btn-two {
+      background: none;
+      border-color: #E2B024;
+      color: #ffffff;
+
+      &:hover {
+         background: #E2B024;
+         color: #000000;
+         border: none;
+      }
+   }
+
+   &__box {
+      position: relative;
+      // height: 760px;
+      // width: 200px;
+      // background: url(../image/new/1.png);
+      // background-repeat: no-repeat;
+      // background-size: cover;
+      &::after {
+         content:'';
+         position: absolute;
+         right: 37%;
+         top: 25%;
+         width: 374px;
+         height: 374px;
+         border-radius: 50%;
+         background: #E2B024;
+      }
+
+      &::before {
+         content:'';
+         position: absolute;
+         right: 9%;
+         top: 17%;
+         width: 478px;
+         height: 478px;
+         border: 8px solid #E2B024;
+      }
+   }
+
+   &__img {
+      position: inherit;
+      top: -25px;
+      right: 72%;
+      z-index: 3;
+      height: 756px;
+      width: 210px;
+   }
+}
