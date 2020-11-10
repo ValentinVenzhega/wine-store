@@ -2,34 +2,52 @@
 .offer {
    text-align: center;
    padding-top: 163px;
+   padding-bottom: 170px;
 
-		&__title {
-         padding-bottom: 130px;
-		}
+   &__title {
+      padding-bottom: 130px;
+   }
 
-		// .offer__block
+   &__box {
+      height: 700px;
+      position: relative;
 
-		&__block {
-		}
+   }
 
-		// .offer__box
+   &__img {
+      width: 370px;
+      height: 558px;
+   }
 
-		&__box {
-		}
-
-		// .offer__img
-
-		&__img {
-		}
-
-		// .offer__subtitle
-
-		&__subtitle {
-		}
-
-		// .offer__price
-
-		&__price {
-		}
+   &__subtitle {
+      position: absolute;
+      bottom: 29%;
+      left:6%;
+      font-size: 24px;
+      text-transform: uppercase;
+   }
+   
+   &__price {
+      position: absolute;
+      bottom: 21%;
+      left: 6%;
+      font-size: 36px;
+      font-weight: 700;
+   }
 }
+
+.swiper-pagination-bullet {
+   width: 20px;
+   height: 20px;
+   background: #ffffff;
+   opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+   background:  #E2B024;
+}
+
+.swiper-slide-active img {
+   height: 110%;
+   width: 370px;}
 

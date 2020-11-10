@@ -1,0 +1,42 @@
+.letter {
+   padding: 57px 0 63px 0;
+   background: #18191A;
+   text-align: center;
+
+   &__title {
+      text-transform: uppercase;
+      font-size: 48px;
+      color: #E2B024;
+      padding-bottom: 24px;
+   }
+
+   &__subtitle {
+      font-size: 18px;
+      padding-bottom: 69px;
+   }
+
+   &__form {
+      display: flex;
+      justify-content: center;
+
+   }
+
+   &__input {
+      width: 540px;
+      height: 64px;
+      padding: 0;
+      border: none;
+      background: #000000;
+      font-size: 18px;
+      padding-left: 30px;
+      color: #ffffff;
+   }
+
+   &__btn {
+      width: 127px;
+      height: 64px;
+      padding: 0;
+      margin-right: 0;
+      font-size: 18px;
+   }
+}

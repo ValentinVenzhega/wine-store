@@ -3,7 +3,6 @@
    background: url(../image/review/1.jpg);
    background-size: cover;
    background-repeat: no-repeat;
-   // height: 774px;
    text-align: center;
    padding-top: 154px;
    padding-bottom: 163px;ц
@@ -17,25 +16,10 @@
       height: 100%;
       width: 100%;
    }
-   // background: rgba(0, 0, 0, 0.8);
-
-   // .review__title
 
    &__title {
       padding-bottom: 58px;
    }
-
-   // .review__box
-
-   &__box {
-   }
-
-   // .review__img
-
-   &__img {
-   }
-
-   // .review__name
 
    &__name {
       font-size: 24px;
@@ -43,8 +27,6 @@
       padding-bottom: 31px;
       padding-top: 30px;
    }
-
-   // .review__text
 
    &__text {
       max-width: 1060px;

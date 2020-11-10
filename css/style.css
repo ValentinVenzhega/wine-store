@@ -302,10 +302,316 @@
 .offer {
   text-align: center;
   padding-top: 163px;
+  padding-bottom: 170px;
 }
 
 .offer__title {
   padding-bottom: 130px;
+}
+
+.offer__box {
+  height: 700px;
+  position: relative;
+}
+
+.offer__img {
+  width: 370px;
+  height: 558px;
+}
+
+.offer__subtitle {
+  position: absolute;
+  bottom: 29%;
+  left: 6%;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.offer__price {
+  position: absolute;
+  bottom: 21%;
+  left: 6%;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #E2B024;
+}
+
+.swiper-slide-active img {
+  height: 110%;
+  width: 370px;
+}
+
+.events {
+  padding-bottom: 158px;
+}
+
+.events__title {
+  text-align: center;
+  padding-bottom: 58px;
+}
+
+.events__block {
+  height: 410px;
+}
+
+.events__box {
+  display: flex;
+  align-items: center;
+  background: #18191A;
+}
+
+.events__main {
+  padding-left: 30px;
+}
+
+.events__subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+.events__subsubtitle {
+  font-size: 18px;
+  padding-bottom: 44px;
+}
+
+.events__text {
+  width: 512px;
+  padding-bottom: 45px;
+}
+
+.swiper-slide .events__box-active {
+  opacity: 0;
+}
+
+.swiper-slide-active .events__box-active {
+  opacity: 1;
+}
+
+.swiper-pos {
+  position: relative;
+}
+
+.swiper-button-prev:after {
+  content: '';
+}
+
+.events__left {
+  position: absolute;
+  left: -10%;
+  width: 80px;
+  height: 80px;
+}
+
+.events__left:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+}
+
+.events__right {
+  position: absolute;
+  right: -10%;
+  width: 80px;
+  height: 80px;
+}
+
+.events__right:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+}
+
+.swiper-button-next:after {
+  content: '';
+}
+
+.contact {
+  padding-bottom: 150px;
+}
+
+.contact__title {
+  text-align: center;
+}
+
+.contact__block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact__text {
+  font-size: 18px;
+  padding-bottom: 77px;
+  width: 466px;
+  padding-right: 35px;
+}
+
+.contact__sv {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  padding-bottom: 42px;
+}
+
+.contact__sv-pos {
+  padding-right: 28px;
+  font-size: 18px;
+}
+
+.contact__img {
+  padding-right: 58px;
+}
+
+.contact__img:last-child {
+  padding-right: 0;
+}
+
+.contact__form {
+  position: relative;
+}
+
+.contact__input {
+  width: 670px;
+  height: 64px;
+  margin-bottom: 29px;
+  background: #000000;
+  padding: 0;
+  border: 1px solid #ffffff;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.contact__input-sub {
+  position: absolute;
+  left: 41px;
+  top: 0;
+  padding: 0 8px 0 8px;
+  font-size: 24px;
+  background: #000000;
+}
+
+.contact__input-sub-1 {
+  top: -20px;
+}
+
+.contact__input-sub-2 {
+  top: 76px;
+}
+
+.contact__input-sub-3 {
+  top: 170px;
+}
+
+.contact__input-sub-4 {
+  top: 266px;
+}
+
+.contact__input-big {
+  height: 133px;
+}
+
+.contact__btn {
+  margin-right: 0;
+  height: 82px;
+  font-size: 36px;
+}
+
+.letter {
+  padding: 57px 0 63px 0;
+  background: #18191A;
+  text-align: center;
+}
+
+.letter__title {
+  text-transform: uppercase;
+  font-size: 48px;
+  color: #E2B024;
+  padding-bottom: 24px;
+}
+
+.letter__subtitle {
+  font-size: 18px;
+  padding-bottom: 69px;
+}
+
+.letter__form {
+  display: flex;
+  justify-content: center;
+}
+
+.letter__input {
+  width: 540px;
+  height: 64px;
+  padding: 0;
+  border: none;
+  background: #000000;
+  font-size: 18px;
+  padding-left: 30px;
+  color: #ffffff;
+}
+
+.letter__btn {
+  width: 127px;
+  height: 64px;
+  padding: 0;
+  margin-right: 0;
+  font-size: 18px;
+}
+
+.footer {
+  padding-top: 133px;
+}
+
+.footer__one {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 72px;
+}
+
+.footer__link {
+  padding-bottom: 15px;
+  font-size: 16px;
+}
+
+.footer__link-big {
+  font-size: 24px;
+  padding-bottom: 42px;
+  text-transform: uppercase;
+}
+
+.footer__link-big a {
+  color: #E2B024;
+}
+
+.footer__img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer__icon {
+  padding-bottom: 29px;
+}
+
+.footer-pos {
+  padding-bottom: 24px;
+}
+
+.footer__two {
+  padding-top: 22px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  padding-bottom: 44px;
+  font-size: 16px;
 }
 
 body {

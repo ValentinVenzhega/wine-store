@@ -43,7 +43,6 @@
       font-weight: 500;
    }
 
-
    &__btn-one {
       background: #E2B024;
       color: #000000;
@@ -55,7 +54,6 @@
          // border-color: #E2B024;
          color: #ffffff;
          border: 1px solid #E2B024;
-         
       }
    }
 
@@ -73,11 +71,7 @@
 
    &__box {
       position: relative;
-      // height: 760px;
-      // width: 200px;
-      // background: url(../image/new/1.png);
-      // background-repeat: no-repeat;
-      // background-size: cover;
+
       &::after {
          content:'';
          position: absolute;

@@ -1,0 +1,50 @@
+.footer {
+   padding-top: 133px;
+
+   // .footer__one
+
+   &__one {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-bottom: 72px;
+   }
+
+   &__box {
+   }
+
+   &__link {
+      padding-bottom: 15px;
+      font-size: 16px;
+   }
+
+   &__link-big {
+      font-size: 24px;
+      padding-bottom: 42px;
+      text-transform: uppercase;
+      & a {
+         color: #E2B024;
+      }
+   }
+
+   &__img {
+      width: 24px;
+      height: 24px;
+   }
+
+   &__icon {
+      padding-bottom: 29px;
+   }
+
+   &-pos {
+      padding-bottom: 24px;
+   }
+
+   &__two {
+      padding-top: 22px;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.6);
+      padding-bottom: 44px;
+      font-size: 16px;
+   }
+}
