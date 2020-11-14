@@ -22,11 +22,41 @@
                   <a href="#"><img src="./image/header/logo.svg" alt="logo"></a>
                </div>
                <div class="header__active">
-                  <a href="#" class="header__active-one">Login</a>
-                  <a href="#" class="header__active-one">Register</a>
+                  <a href="#" class="header__active-one header__login">Login</a>
+                  <a href="#" class="header__active-one header__register">Register</a>
                   <a href="#" class="header__active-one">Wish List (0)</a>
-                  <a href="#" class="header__active-two"><img src="./image/header/search.svg" alt="search"></a>
-                  <a href="#" class="header__active-two"><img src="./image/header/bag.svg" alt="bag"></a>
+                  <a href="#" class="header__active-two header__search"><img src="./image/header/search.svg" alt="search"></a>
+                  <a href="#" class="header__active-two header__bag"><img src="./image/header/bag.svg" alt="bag"></a>
+                  <div class="header__upsearch ">
+                     <div class="search__big">
+                        <input type="text" class="header__input " placeholder="specify goods">
+                        <button class="header__btn">
+                           <div class="icon__img icon__small">
+                              <img src="./image/header/search.svg" alt="2">
+                           </div>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+               <div class="register register__pos">
+                  <div class="register__reg register__block">
+                     <h2>Регистрация</h2>
+                     <div class="register__close register__exit"> x</div>
+                     <input class="register__input" type="email" required placeholder="введите email">
+                     <input class="register__input" type="password" required placeholder="введите пароль">
+                     <a class="register__link">Забыли пароль</a>
+                     <button class="register__btn register__button">Зарегистрироваться</button>
+                  </div>
+               </div>
+               <div class="login  register__pos">
+                  <div class="login__on register__block">
+                     <div class="register__close login__exit">x</div>
+                     <h2>Авторизация</h2>
+                     <input class="register__input" type="email" required placeholder="введите email">
+                     <input class="register__input" type="password" required placeholder="введите пароль">
+                     <a class="register__link">Забыли пароль</a>
+                     <button class="register__btn login__button">Вход</button>
+                  </div>
                </div>
             </div>
             <div class="header__two">
@@ -377,10 +407,22 @@
                   <a href="#">Brahmanbaira, Dhaka, Bangladesh</a>
                </div>
                <div class="conact__icon">
-                  <img src="./image/contact/google.svg" class="contact__img" alt="google">
-                  <img src="./image/contact/twitter.svg" class="contact__img" alt="twitter">
-                  <img src="./image/contact/linkedin.svg" class="contact__img" alt="linkedin">
-                  <img src="./image/contact/facebook.svg" class="contact__img" alt="facebook">
+                  <a href="#" class="contact__img">
+                     <img src="./image/contact/google.svg" alt="google">
+                  </a>
+                  <a href="#" class="contact__img">
+                     <img src="./image/contact/twitter.svg" alt="twitter">
+                  </a>
+                  <a href="#" class="contact__img">
+                     <img src="./image/contact/linkedin.svg" alt="linkedin">
+                  </a>
+                  <a href="#" class="contact__img">
+                     <img src="./image/contact/facebook.svg"  alt="facebook">
+                  </a>
+                  
+                  
+                  
+                  
                </div>
             </div>
             <div class="contact__box">
@@ -444,24 +486,33 @@
             <div class="footer__box">
                <div class="footer__link-big"><a href="#">connect with us</a></div>
                <div class="conact__icon footer__icon">
-                  <img src="./image/contact/google.svg" class="contact__img footer__img" alt="google">
-                  <img src="./image/contact/twitter.svg" class="contact__img footer__img" alt="twitter">
-                  <img src="./image/contact/linkedin.svg" class="contact__img footer__img" alt="linkedin">
-                  <img src="./image/contact/facebook.svg" class="contact__img footer__img" alt="facebook">
+                  <a href="#" class="contact__img footer__img">
+                     <img src="./image/contact/google.svg"  alt="google">
+                  </a>
+                  <a href="#" class="contact__img footer__img">
+                     <img src="./image/contact/twitter.svg" alt="twitter">
+                  </a>
+                  <a href="#" class="contact__img footer__img">
+                     <img src="./image/contact/linkedin.svg" alt="linkedin">
+                  </a>
+                  <a href="#" class="contact__img footer__img">
+                     <img src="./image/contact/facebook.svg" alt="facebook">
+                  </a>
                </div>
-               <div class="contact__phone contact__sv footer-pos">
-                  <img src="./image/contact/Call.svg" class="contact__sv-pos" alt="call">
-                  <a href="tel:+01232546987">+012-3254-6987</a>
-               </div>
-               <div class="contact__mail contact__sv footer-pos">
-                  <img src="./image/contact/Message.svg" class="contact__sv-pos" alt="message">
-                  <a href="mailto:Food&drink@gmail.com">Food&drink@gmail.com</a>
-               </div>
-               <div class="contact__map contact__sv footer-pos">
-                  <img src="./image/contact/Location.svg" class="contact__sv-pos" alt="location">
-                  <a href="#">Brahmanbaira, Dhaka, Bangladesh</a>
-               </div>
-               
+               <ul>
+                  <li class="contact__map contact__sv footer-pos">
+                     <img src="./image/contact/Call.svg" class="contact__sv-pos" alt="call">
+                     <a href="tel:+01232546987">+012-3254-6987</a>
+                  </li>
+                  <li class="contact__map contact__sv footer-pos">
+                     <img src="./image/contact/Message.svg" class="contact__sv-pos" alt="message">
+                     <a href="mailto:Food&drink@gmail.com">Food&drink@gmail.com</a>
+                  </li>
+                  <li class="contact__map contact__sv footer-pos">
+                     <img src="./image/contact/Location.svg" class="contact__sv-pos" alt="location">
+                     <a href="#">Brahmanbaira, Dhaka, Bangladesh</a>
+                  </li>
+               </ul>
             </div>
          </div>
          <div class="footer__two">Copyright 2020 wine&food All Rights Reserved (Designhunterrbd) </div>

@@ -4,6 +4,7 @@
       align-items: center;
       justify-content: space-around;
       font-size: 12px;
+      position: relative;
    }
 
    &__list {
@@ -30,12 +31,156 @@
          padding-right: 30px;
       }
    }
+
+   & .search__hide {
+      display: none;
+   }
+
+   &__upsearch {
+      display: none;
+   }
+
+   & .upsearch__visible {
+      display: block;
+   }
+
+   &__input {
+      width: 200px;
+      height: 35px;
+      border-radius: 5px 0 0 5px;
+      border: 1px solid #000000;
+      padding: 0 0 0 20px;
+      &:hover {
+         background: #c2bdbd;
+      }
+   }
+
+   &__btn {
+      height: 37px;
+      width: 50px;
+      border-radius: 0 5px 5px 0;
+      border: 1px solid #000000;
+      background: #ffffff;
+      padding: 0;
+      text-transform: uppercase;
+      font-weight: 700;
+      &:hover {
+         background: #c2bdbd;
+      }
+      
+   }
    
 
    
 }
 
+.search__big {
+   display: flex;
+}
+
 .container {
    max-width: 1171px;
    margin: 0 auto;
+}
+
+.register {
+   display: none;
+
+   &__pos {
+      z-index: 5;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background: rgba(255, 255, 255, 0.6);
+   }
+   
+
+   &__visible {
+      display: block;
+   }
+   &__block {
+      position: relative;
+      text-align: center;
+      width: 250px;
+      height: 270px;
+      background: #000000;
+      border: 1px solid #ffffff;
+
+      &  a:hover {
+         color: #E2B024;
+         border-bottom:  0;
+         padding-bottom: 20px;
+      }
+
+   }
+
+   &__reg {
+
+      position: absolute;
+      top: 150px;
+      right: 39%;
+
+   }
+      
+   
+
+   &__input {
+      padding: 5px 5px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      
+   }
+
+   &__btn {
+      margin: auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #000000;
+      border: 1px solid #E2B024;
+      color: #ffffff;
+      font-weight: 600;
+      &:hover {
+         background: #E2B024;
+         color: #000000;
+      }
+
+   }
+
+   &__link {
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      padding-bottom: 20px;
+   }
+
+   &__close {
+      font-size: 19px;
+      position: absolute;
+      top: 5px;
+      right: 12px;
+      &:hover {
+         cursor: pointer;
+         color: #E2B024;
+      }
+      
+   }
+}
+
+.login {
+   display: none;
+
+   &__on {
+      position: absolute;
+      top: 150px;
+      right: 39%;
+
+   }
+
+   &__visible {
+      display: block;
+   }
+
 }
