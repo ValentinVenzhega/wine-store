@@ -32,15 +32,11 @@
   padding-right: 30px;
 }
 
-.header .search__hide {
+.header__search {
   display: none;
 }
 
-.header__upsearch {
-  display: none;
-}
-
-.header .upsearch__visible {
+.header__search-pos {
   display: block;
 }
 
@@ -72,10 +68,6 @@
 .header__btn:hover {
   background: #E2B024;
   border: #000000;
-}
-
-.search__big {
-  display: flex;
 }
 
 .container {
@@ -175,6 +167,14 @@
 
 .login__visible {
   display: block;
+}
+
+.search__big {
+  display: flex;
+}
+
+.search__small-hide {
+  display: none;
 }
 
 .main {
