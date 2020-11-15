@@ -1,23 +1,28 @@
 // вход
 const logElem = document.querySelector('.header__login');
 const logOnBlock = document.querySelector('.login');
+const logForm = document.querySelector('.login-form');
+const emailLogInput = document.querySelector('.login-email');
+const passwordLogInput = document.querySelector('.login-password');
 //регистрация
 const regElem = document.querySelector('.header__register');
 const regOnBlock = document.querySelector('.register');
+const regForm = document.querySelector('.register-form');
+const emailRegInput = document.querySelector('.register-email');
+const passwordRegInput = document.querySelector('.register-password');
 // поиск
 const headerSearch = document.querySelector('.header__search');
 const searchSmall = document.querySelector('.search__small');
 const inputHeader = document.querySelector('.header__input');
 // покупки
-const bagElem= document.querySelector('.header__bag');
+const bagElem = document.querySelector('.header__bag');
 // личный кабинет
 const personElem = document.querySelector('.header__avatar-small');
 const personBigBlock = document.querySelector('.header__photo');
 
 
 
-const listUsers = [
-   {
+const listUsers = [{
       name: 'Valientin',
       age: 20,
       photo: 'https://n1s1.elle.ru/e9/2b/bf/e92bbf78184a1168e43d2f60db7c6b8b/660x858_1_064ee3d402273445e0674221c253e7ae@800x1040_0xc35dbb80_13873213741517414727.jpg',
@@ -30,81 +35,143 @@ const listUsers = [
       photo: 'https://cdn.photosight.ru/img/d/0e7/6577150_large.jpg',
       email: 'vel09vel@rambler.ru',
       password: '12345'
-   } 
+   }
 
 ];
-console.log( listUsers);
+console.log(listUsers);
 
 const setUsers = {
    user: null,
 
-   logIn(name, photo, email, password) {
+   signUp(email, password) {
+      // проверка на валидность
+      // if (!regExpValidEmail.test(email)) {
+      //    alert('email не валид');
+      //    return;
+      // }
 
+      // прок=верка, чтобы нельзя было зайти без ввода данных
+      if (!email.trim() || !password.trim()) {
+         alert('Введите данные')
+         return;
+      };
+
+      // получение пользователя по email и доваляем пользователя 
+      if (!this.getUser(email)) {
+         const user = {
+            email,
+            password,
+            displayName: email.substring(0, email.indexOf('@'))
+         };
+         // добавляем пользователя
+         listUsers.push(user);
+         // // авторизуется пользователь успешно
+         // this.autorizedUser(user);
+         // // меняем блоки
+         // if (handler) {
+         //    handler();
+         // }
+      } else {
+         alert('Пользователь с таким email уже зарегестрирован')
+      }
    },
+
+   // logIn(name, photo, email, password) {
+
+   // },
 
    logOut() {
 
    }
 };
 
-// открытие модального окна регистрации
-regElem.addEventListener('click', () => {
-   regOnBlock.classList.toggle('register__visible');
-   document.body.style = 'overflow: hidden';
-});
+// перебираем массив и ищем пользователя с таким email
+function getUser(email) {
+   return listUsers.find(item => item.email === email);
+};
 
-// закрытие модального окна регистрации
-window.addEventListener('click', (e) => {
-   const target = e.target;
-   if(target == regOnBlock || target.closest('.register__exit') || target.closest('.register__button')) {
-      regOnBlock.classList.remove('register__visible');
-   }
-});
-
-// открытие модального окна входа
-logElem.addEventListener('click', () => {
-   logOnBlock.classList.toggle('login__visible');
-   document.body.style = 'overflow: hidden';
-});
-
-// закрытие модального окна входа
-document.addEventListener('click', (e) => {
-   const target = e.target;
-   if(target == logOnBlock || target.closest('.login__exit') || target.closest('.login__button')) {
-      logOnBlock.classList.remove('login__visible');
-   }
-});
-
-// открытие модального окна поиска
-searchSmall.addEventListener('click', () => {
-   headerSearch.classList.add('header__search-pos');
-   searchSmall.classList.add('search__small-hide');
-});
-
-// закрытие открытие модального окна поиска
-document.addEventListener('mousedown', (e) => {
-   if (e.target.closest('.header__search') === null || e.target.closest('.header__btn')) {
-      headerSearch.classList.remove('header__search-pos');
-      searchSmall.classList.remove('search__small-hide');
-      inputHeader.value = '';
-   }
-});
+//   записываем user в user
+function autorizedUser(user) {
+   this.user = user;
+};
 
 
-// открытие личного кабинета
-personElem.addEventListener('click', () => {
-   personElem.classList.add('avatar__small-visible');
-   personBigBlock.classList.add('header__photo-visible');
 
-});
+const init = () => {
+   // открытие модального окна регистрации
+   regElem.addEventListener('click', () => {
+      regOnBlock.classList.toggle('register__visible');
+      document.body.style = 'overflow: hidden';
+   });
 
-// закрытиеличного кабинета
-document.addEventListener('click', (e) => {
-   const target = e.target;
-   if(target.closest('.header__avatar-small') === null || target.closest('.header__avatar-btn')) {
-      personElem.classList.remove('avatar__small-visible');
-      personBigBlock.classList.remove('header__photo-visible');
-   }
+   // закрытие модального окна регистрации
+   window.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = e.target;
+      if (target == regOnBlock || target.closest('.register__exit')) {
+         regOnBlock.classList.remove('register__visible');
+      } else if (target.closest('.register__button')) {
+         regOnBlock.classList.remove('register__visible');
+         const emailValue = emailRegInput.value;
+         const passwordValue = passwordRegInput.value;
+
+         setUsers.signUp(emailValue, passwordValue);
+         console.log(setUsers.signUp(emailValue, passwordValue));
+      }
+   });
+
+   // открытие модального окна входа
+   logElem.addEventListener('click', () => {
+      logOnBlock.classList.toggle('login__visible');
+      document.body.style = 'overflow: hidden';
+   });
+
+   // закрытие модального окна входа
+   document.addEventListener('click', (e) => {
+      const target = e.target;
+      if (target == logOnBlock || target.closest('.login__exit') || target.closest('.login__button')) {
+         logOnBlock.classList.remove('login__visible');
+      }
+   });
+
+   // открытие модального окна поиска
+   searchSmall.addEventListener('click', () => {
+      headerSearch.classList.add('header__search-pos');
+      searchSmall.classList.add('search__small-hide');
+   });
+
+   // закрытие открытие модального окна поиска
+   document.addEventListener('mousedown', (e) => {
+      if (e.target.closest('.header__search') === null || e.target.closest('.header__btn')) {
+         headerSearch.classList.remove('header__search-pos');
+         searchSmall.classList.remove('search__small-hide');
+         inputHeader.value = '';
+      }
+   });
+
+
+   // открытие личного кабинета
+   personElem.addEventListener('click', () => {
+      personElem.classList.add('avatar__small-visible');
+      personBigBlock.classList.add('header__photo-visible');
+
+   });
+
+   // закрытиеличного кабинета
+   document.addEventListener('click', (e) => {
+      const target = e.target;
+      if (target.closest('.header__avatar-small') === null || target.closest('.header__avatar-btn')) {
+         personElem.classList.remove('avatar__small-visible');
+         personBigBlock.classList.remove('header__photo-visible');
+      }
+   });
+
+}
+
+
+// инициализация после полной загрузки сайта
+document.addEventListener('DOMContentLoaded', () => {
+   init();
 });
 
 
@@ -152,5 +219,3 @@ const swiper2 = new Swiper('.swiper-container2', {
       prevEl: '.swiper-button-prev',
    },
 });
-
-

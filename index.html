@@ -10,6 +10,8 @@
    <link rel="stylesheet" href="./fonts/fonts.css">
    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
    <link rel="stylesheet" href="./css/style.css">
+
+   <script src="./script/script.js" type="module" defer></script>
 </head>
 
 <body>
@@ -50,24 +52,30 @@
                   </div>
                </div>
                <div class="register register__pos">
-                  <div class="register__reg register__block">
-                     <h2>Регистрация</h2>
-                     <div class="register__close register__exit"> x</div>
-                     <input class="register__input" type="email" required placeholder="введите email">
-                     <input class="register__input" type="password" required placeholder="введите пароль">
-                     <a class="register__link">Забыли пароль</a>
-                     <button class="register__btn register__button">Зарегистрироваться</button>
-                  </div>
+                  <form class="register__form">
+                     <div class="register__reg register__block">
+                        <h2>Регистрация</h2>
+                        <div class="register__close register__exit"> x</div>
+                        <input class="register__input register__email" type="email" name="email" required placeholder="введите email">
+                        <input class="register__input register__password" type="password" name="password" required placeholder="введите пароль">
+                        <a class="register__link">Забыли пароль</a>
+                        <button class="register__btn register__button">Зарегистрироваться</button>
+                     </div>
+                  </form>
+                  
                </div>
                <div class="login  register__pos">
-                  <div class="login__on register__block">
-                     <div class="register__close login__exit">x</div>
-                     <h2>Авторизация</h2>
-                     <input class="register__input" type="email" required placeholder="введите email">
-                     <input class="register__input" type="password" required placeholder="введите пароль">
-                     <a class="register__link">Забыли пароль</a>
-                     <button class="register__btn login__button">Вход</button>
-                  </div>
+                  <form action="" class="login__form">
+                     <div class="login__on register__block">
+                        <div class="register__close login__exit">x</div>
+                        <h2>Авторизация</h2>
+                        <input class="register__input login__email" type="email" required placeholder="введите email">
+                        <input class="register__input login__password" type="password" required placeholder="введите пароль">
+                        <a class="register__link">Забыли пароль</a>
+                        <button class="register__btn login__button">Вход</button>
+                     </div>
+                  </form>
+                  
                </div>
                
 
@@ -531,7 +539,6 @@
          <div class="footer__two">Copyright 2020 wine&food All Rights Reserved (Designhunterrbd) </div>
       </div>
    </footer>
-   <script src="./script/script.js" type="module"></script>
 
 </body>
 
