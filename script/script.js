@@ -1,17 +1,19 @@
 // вход
 const logElem = document.querySelector('.header__login');
 const logOnBlock = document.querySelector('.login');
-const logOutBlock = document.querySelector('.login__exit');
 //регистрация
 const regElem = document.querySelector('.header__register');
 const regOnBlock = document.querySelector('.register');
-const regOutBlock = document.querySelector('.register__exit');
 // поиск
 const headerSearch = document.querySelector('.header__search');
 const searchSmall = document.querySelector('.search__small');
 const inputHeader = document.querySelector('.header__input');
 // покупки
 const bagElem= document.querySelector('.header__bag');
+// личный кабинет
+const personElem = document.querySelector('.header__avatar-small');
+const personBigBlock = document.querySelector('.header__photo');
+
 
 
 const listUsers = [
@@ -88,6 +90,22 @@ document.addEventListener('mousedown', (e) => {
    }
 });
 
+
+// открытие личного кабинета
+personElem.addEventListener('click', () => {
+   personElem.classList.add('avatar__small-visible');
+   personBigBlock.classList.add('header__photo-visible');
+
+});
+
+// закрытиеличного кабинета
+document.addEventListener('click', (e) => {
+   const target = e.target;
+   if(target.closest('.header__avatar-small') === null || target.closest('.header__avatar-btn')) {
+      personElem.classList.remove('avatar__small-visible');
+      personBigBlock.classList.remove('header__photo-visible');
+   }
+});
 
 
 

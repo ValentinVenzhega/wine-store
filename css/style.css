@@ -47,6 +47,7 @@
   border: 1px solid #E2B024;
   background: #000000;
   padding: 0 0 0 20px;
+  color: #ffffff;
 }
 
 .header__input:hover {
@@ -68,6 +69,49 @@
 .header__btn:hover {
   background: #E2B024;
   border: #000000;
+}
+
+.header__photo {
+  display: none;
+}
+
+.header__photo-visible {
+  display: flex;
+  align-items: center;
+  border: 1px solid #E2B024;
+  padding: 6px 7px;
+  border-radius: 3%;
+  background: #18191A;
+}
+
+.header__photo-link:hover {
+  color: #E2B024;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.header__avatar {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.header__avatar-name {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.header__avatar-btn {
+  margin-left: 10px;
+  font-size: 16px;
+  padding: 5px 10px;
+  font-weight: 600;
+  border: 1px solid #E2B024;
+}
+
+.avatar__small-visible {
+  display: none;
 }
 
 .container {
