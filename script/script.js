@@ -8,8 +8,8 @@ const passwordLogInput = document.querySelector('.login-password');
 const regElem = document.querySelector('.header__register');
 const regOnBlock = document.querySelector('.register');
 const regForm = document.querySelector('.register-form');
-const emailRegInput = document.querySelector('.register-email');
-const passwordRegInput = document.querySelector('.register-password');
+const emailRegInput = document.querySelector('.register__email');
+const passwordRegInput = document.querySelector('.register__password');
 // поиск
 const headerSearch = document.querySelector('.header__search');
 const searchSmall = document.querySelector('.search__small');
@@ -24,14 +24,12 @@ const personBigBlock = document.querySelector('.header__photo');
 
 const listUsers = [{
       name: 'Valientin',
-      age: 20,
       photo: 'https://n1s1.elle.ru/e9/2b/bf/e92bbf78184a1168e43d2f60db7c6b8b/660x858_1_064ee3d402273445e0674221c253e7ae@800x1040_0xc35dbb80_13873213741517414727.jpg',
       email: 'valek917@yandex.ru',
       password: '123456'
    },
    {
       name: 'Sofya',
-      age: 24,
       photo: 'https://cdn.photosight.ru/img/d/0e7/6577150_large.jpg',
       email: 'vel09vel@rambler.ru',
       password: '12345'
@@ -44,11 +42,6 @@ const setUsers = {
    user: null,
 
    signUp(email, password) {
-      // проверка на валидность
-      // if (!regExpValidEmail.test(email)) {
-      //    alert('email не валид');
-      //    return;
-      // }
 
       // прок=верка, чтобы нельзя было зайти без ввода данных
       if (!email.trim() || !password.trim()) {
@@ -65,34 +58,23 @@ const setUsers = {
          };
          // добавляем пользователя
          listUsers.push(user);
-         // // авторизуется пользователь успешно
-         // this.autorizedUser(user);
-         // // меняем блоки
-         // if (handler) {
-         //    handler();
-         // }
+         // авторизуется пользователь успешно
+         this.autorizedUser(user);
       } else {
          alert('Пользователь с таким email уже зарегестрирован')
       }
    },
 
-   // logIn(name, photo, email, password) {
+   // перебираем массив и ищем пользователя с таким email
+   getUser(email) {
+      return listUsers.find(item => item.email === email)
+   },
 
-   // },
-
-   logOut() {
-
+   // записываем user в user
+   autorizedUser(user) {
+      this.user = user;
    }
-};
 
-// перебираем массив и ищем пользователя с таким email
-function getUser(email) {
-   return listUsers.find(item => item.email === email);
-};
-
-//   записываем user в user
-function autorizedUser(user) {
-   this.user = user;
 };
 
 
@@ -116,7 +98,6 @@ const init = () => {
          const passwordValue = passwordRegInput.value;
 
          setUsers.signUp(emailValue, passwordValue);
-         console.log(setUsers.signUp(emailValue, passwordValue));
       }
    });
 
@@ -169,10 +150,10 @@ const init = () => {
 }
 
 
-// инициализация после полной загрузки сайта
-document.addEventListener('DOMContentLoaded', () => {
-   init();
-});
+      // инициализация после полной загрузки сайта
+      document.addEventListener('DOMContentLoaded', () => {
+         init();
+      });
 
 
 
@@ -185,37 +166,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js';
-const swiper = new Swiper('.swiper-container', {
-   slidesPerView: 3,
-   centeredSlides: true,
-   loop: true,
-   loopedSlides: 3,
-   pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
-   },
-});
+      import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js';
+      const swiper = new Swiper('.swiper-container', {
+         slidesPerView: 3,
+         centeredSlides: true,
+         loop: true,
+         loopedSlides: 3,
+         pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+         },
+      });
 
-const swiper1 = new Swiper('.swiper-container1', {
-   slidesPerView: 1,
-   centeredSlides: true,
-   loop: true,
-   loopedSlides: 1,
-   pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
-   },
-});
+      const swiper1 = new Swiper('.swiper-container1', {
+         slidesPerView: 1,
+         centeredSlides: true,
+         loop: true,
+         loopedSlides: 1,
+         pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+         },
+      });
 
-const swiper2 = new Swiper('.swiper-container2', {
-   slidesPerView: 1,
-   centeredSlides: true,
-   loop: true,
-   navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-   },
-});
+      const swiper2 = new Swiper('.swiper-container2', {
+         slidesPerView: 1,
+         centeredSlides: true,
+         loop: true,
+         navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+         },
+      });
