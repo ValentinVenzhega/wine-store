@@ -130,10 +130,6 @@ const init = () => {
          // открытие личного кабинета
          personElem.classList.add('avatar__small-visible');
          personBigBlock.classList.add('header__photo-visible');
-
-         
-
-            
       }
       document.body.style = 'overflow: visible';
    });
