@@ -251,9 +251,23 @@
   font-weight: 300;
 }
 
+.main__subtitle-hide {
+  display: none;
+}
+
 .main__text {
   font-size: 16px;
   padding-bottom: 15px;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.main__more {
+  display: none;
+}
+
+.main__close {
+  display: none;
 }
 
 .new {

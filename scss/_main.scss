@@ -25,10 +25,24 @@
       padding-bottom: 35px;
       line-height: 24px;
       font-weight: 300;
+
+      &-hide {
+         display: none;
+      }
    }
 
    &__text {
       font-size: 16px;
       padding-bottom: 15px;
+      width: 100px;
+      margin: 0 auto;
+   }
+
+   &__more {
+      display: none;
+   }
+
+   &__close {
+      display: none;
    }
 }
